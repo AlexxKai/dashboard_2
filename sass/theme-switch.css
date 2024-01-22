@@ -1,0 +1,29 @@
+body {
+  background-color: #fff;
+  color: #000;
+}
+
+.btn {
+  background-color: #8281d8;
+  color: #fff;
+}
+
+.dark-mode body {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+.dark-mode .btn {
+  background-color: rgb(34, 100, 158) !important;
+  color: #000 !important;
+}
+
+.light-mode body {
+  background-color: #fff !important;
+  color: #000 !important;
+}
+.light-mode .btn {
+  background-color: #8281d8 !important;
+  color: #fff !important;
+}
+
+/*# sourceMappingURL=theme-switch.css.map */

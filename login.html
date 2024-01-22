@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+
+    <!-- Enlazar Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/login.css" rel="stylesheet">
+
+    <!--Import Icons-->
+    <link href="./node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Logo -->
+    <link rel="icon" type="image/x-icon" href="./img/logo/10.png">
+
+    <!-- Autenticación -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hellojs/2.10.0/hello.all.min.js"></script>
+
+</head>
+
+<body>
+    <h2>Ingresar o realizar registro</h2>
+
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="#">
+                <h1>Crear Cuenta</h1>
+                <div class="social-container">
+                    <a href="https://www.facebook.com/?locale=es_ES" class="social"><i class="bi bi-facebook"></i></a>
+                    <a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fwww.google.es%2F&ec=GAZAmgQ&hl=es&ifkv=ASKXGp0bYjjn3o5xJ8vamyVauxvnYlCK6ctC5tdX0CEGC1Rk84AYSw36MnZA2QhHb34abJw1sbgFmw&passive=true&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-2079649802%3A1704991699885182&theme=glif"
+                        class="social"><i class="bi bi-google"></i></a>
+                    <a href="https://www.linkedin.com/company/linkedin" class="social"><i
+                            class="bi bi-linkedin"></i></a>
+
+                </div>
+                <span>usa tu email</span>
+                <input type="text" placeholder="Nombre" />
+                <input type="email" placeholder="Email" />
+                <input type="password" placeholder="Password" />
+                <button>Registrar</button>
+            </form>
+        </div>
+
+        <!-- Login -->
+        <div class="form-container sign-in-container">
+            <form action="#">
+                <h1>Ingresar</h1>
+                <div class="social-container">
+                    <a href="https://www.facebook.com/?locale=es_ES" class="social"><i class="bi bi-facebook"></i></a>
+                    <a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fwww.google.es%2F&ec=GAZAmgQ&hl=es&ifkv=ASKXGp0bYjjn3o5xJ8vamyVauxvnYlCK6ctC5tdX0CEGC1Rk84AYSw36MnZA2QhHb34abJw1sbgFmw&passive=true&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-2079649802%3A1704991699885182&theme=glif"
+                        class="social"><i class="bi bi-google"></i></a>
+                    <a href="https://www.linkedin.com/company/linkedin" class="social"><i
+                            class="bi bi-linkedin"></i></a>
+                </div>
+                <span>Accede con tu email</span>
+                <input type="email" placeholder="Email" />
+                <input type="password" placeholder="Password" />
+                <a href="#">¿Olvidaste tu password?</a>
+
+                <button>Ingresar</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>¡Bienvenido nuevamente!</h1>
+                    <p>Ingresa con tu cuenta personal para acceder a tus datos</p>
+                    <button class="ghost" id="signIn">Ingresar</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>¡Hola!</h1>
+                    <p>Realiza tu registro usando tus datos personales</p>
+                    <button class="ghost" id="signUp">Registrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <br>
+        <a href="./index.html"><button>Volver</button></a>
+    </div>
+
+
+    <!-- Script para gestionar la autenticación -->
+    <script>
+        // Configuración de las aplicaciones OAuth
+        hello.init({
+            google: '916274662999-ui6voh4ifevd8qjso2pibhenh7b8ib2b.apps.googleusercontent.com',
+            facebook: 'YOUR_FACEBOOK_APP_ID',
+            github: 'YOUR_GITHUB_CLIENT_ID',
+            apple: 'YOUR_APPLE_CLIENT_ID'
+        });
+
+        // Función para iniciar sesión con Google
+        function loginWithGoogle() {
+            hello('google').login().then(function () {
+                console.log('Google login successful');
+                // Aquí puedes realizar acciones adicionales después del inicio de sesión
+            }, function (e) {
+                console.error('Google login failed', e);
+            });
+        }
+
+        // Función para iniciar sesión con Facebook
+        function loginWithFacebook() {
+            hello('facebook').login().then(function () {
+                console.log('Facebook login successful');
+                // Aquí puedes realizar acciones adicionales después del inicio de sesión
+            }, function (e) {
+                console.error('Facebook login failed', e);
+            });
+        }
+
+        // Función para iniciar sesión con GitHub
+        function loginWithGitHub() {
+            hello('github').login().then(function () {
+                console.log('GitHub login successful');
+                // Aquí puedes realizar acciones adicionales después del inicio de sesión
+            }, function (e) {
+                console.error('GitHub login failed', e);
+            });
+        }
+
+        // Función para iniciar sesión con Apple
+        function loginWithApple() {
+            hello('apple').login().then(function () {
+                console.log('Apple login successful');
+                // Aquí puedes realizar acciones adicionales después del inicio de sesión
+            }, function (e) {
+                console.error('Apple login failed', e);
+            });
+        }
+    </script>
+
+    <!-- Enlazar Bootstrap JS al final del cuerpo del documento -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Agregar script para manejar eventos del formulario (Ajax para enviar datos) -->
+    <script src="./js/login.js"></script>
+
+
+</body>
+
+</html>
