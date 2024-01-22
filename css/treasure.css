@@ -1,0 +1,80 @@
+html {
+    margin: 0;
+    padding: 0;
+    background-image: url('../img/captain_toad.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    color: #fff;
+}
+
+p{
+    position: absolute;
+    top: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #a364f7;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    border: 1px solid #a364f7;
+    transition: transform 0.3s ease; /* Agrega una transición suave para el efecto */
+}
+
+p:hover{
+    background-color: transparent;
+    border: none;
+    transform: translateX(20px); /* Mueve el div 20px hacia la derecha al colocar el ratón encima */
+}
+
+button {
+    position: absolute;
+    bottom: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #a364f7;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    border: 1px solid #a364f7;
+}
+
+button:hover {
+    background-color: #9043f5;
+}
+
+button {
+    border-radius: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+button:focus {
+    outline: none;
+}
+
+button.ghost {
+    background-color: transparent;
+    border-color: #FFFFFF;
+}
