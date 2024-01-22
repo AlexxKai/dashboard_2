@@ -1,3 +1,6 @@
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+
 html{
     height: 100vh;
 }
@@ -12,4 +15,63 @@ main{
     align-items: center;
     flex-direction: column;
     text-align: center;
+}
+
+/* Search bar */
+#searchBarContainer {
+    display: block;
+    position: absolute;
+    top: 95px;
+    z-index: 1;
+    /*Inicialmente fuera de pantalla */
+    left: -100%;
+    /*Transición */
+    transition: left 0.3s ease-in-out;
+}
+
+#searchBarContainer input {
+    border-radius: 20px;
+    border-bottom: 1px solid #a364f7;
+    box-shadow: 0 0 50px rgb(184, 107, 255);
+    background-color: #e41414;
+    color: #fff;
+}
+
+#searchBarContainer button {
+    border-radius: 20px;
+    border-bottom: 1px solid #a364f7;
+    box-shadow: 0 0 50px rgb(184, 107, 255);
+    background-color: #e41414;
+    color: #fff;
+}
+
+#search {
+    color: #fff;
+    text-decoration: none;
+}
+
+#searchBarContainer.active {
+    left: 110px;
+    /*Cambia posición cuando se activa */
+}
+
+#searchBarContainer.active button {
+    left: 110px;
+    /*Cambia posición cuando se activa */
+}
+
+#searchBarContainer.active input {
+    border-radius: 20px;
+    border-bottom: 1px solid #a364f7;
+    box-shadow: 0 0 20px rgb(184, 107, 255);
+    background-color: #333;
+    color: #fff;
+}
+
+#searchBarContainer.active button {
+    border-radius: 20px;
+    border-bottom: 1px solid #a364f7;
+    box-shadow: 0 0 20px rgb(184, 107, 255);
+    background-color: #333;
+    color: #fff;
 }
