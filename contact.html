@@ -66,31 +66,31 @@
   <!-- MAIN -->
   <main>
     <div class="container">
-      <h2>Formulario de Contacto</h2>
+      <h2>Contact us</h2>
 
       <div class="form-group">
         <label for="tipoContacto">Seleccione el tipo de contacto:</label>
         <select class="form-control" id="tipoContacto" onchange="mostrarCampos()">
           <option value="" selected>Seleccionar el tipo de contacto</option>
-          <option value="sugerencia">Sugerencia</option>
-          <option value="ayuda">Ayuda</option>
-          <option value="reclamacion">Reclamación</option>
+          <option value="sugerencia">Suggestion</option>
+          <option value="ayuda">Help</option>
+          <option value="reclamacion">Complaint</option>
         </select>
       </div>
 
       <form id="formularioContacto">
         <div class="form-group" id="campoCorreo" style="display: none;">
-          <label for="correo">Correo Electrónico:</label>
+          <label for="correo">Email:</label>
           <input type="email" class="form-control" id="correo" placeholder="Ingrese su correo">
         </div>
 
-        <div class="form-group" id="campoComentarios">
-          <label for="comentarios">Comentarios:</label>
+        <div class="form-group" id="campoComentarios" style="display: none;">
+          <label for="comentarios">Comments:</label>
           <textarea class="form-control" id="comentarios" rows="4" placeholder="Ingrese sus comentarios"></textarea>
         </div>
 
         <div class="form-group" id="campoID" style="display: none;">
-          <label for="idReclamacion">Número de ID (Reclamación):</label>
+          <label for="idReclamacion">ID Number (Claim):</label>
           <input type="text" class="form-control" id="idReclamacion" placeholder="Ingrese el número de ID">
         </div>
 
