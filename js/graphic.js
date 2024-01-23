@@ -11,10 +11,10 @@ function drawChart() {
   data.addColumn('string', 'Element');
   data.addColumn('number', 'Percentage');
   data.addRows([
-    ['CSS', 19.4],
-    ['HTML', 70.5],
-    ['JS', 7.9],
-    ['SCSS', 2.2]
+    ['CSS', 24.1],
+    ['HTML', 59.3],
+    ['JS', 14.0],
+    ['SCSS', 2.6]
   ]);
 
 
@@ -29,3 +29,4 @@ function drawChart() {
   var chart = new google.visualization.PieChart(document.getElementById('myPieChart'));
   chart.draw(data, null);
 }
+

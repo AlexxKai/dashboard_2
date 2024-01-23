@@ -1,15 +1,19 @@
 @import "~bootstrap-icons/font/bootstrap-icons.css";
 
 
-html{
+html {
     height: 100vh;
 }
 
-main{
+body {
+    margin: 0;
+}
+
+main {
     margin-top: 75px;
 }
 
-.container{
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -80,15 +84,69 @@ main{
 .clock-container {
     font-family: 'Arial', sans-serif;
     font-size: 3em;
-    color: #000; /* Color del texto blanco */
-    background-color: #a8caec; /* Color de fondo azul más claro */
+    color: #00d4ff;
+    /* Cambiado a color neon */
+    background-color: #000;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+    border-radius: 3px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    /* Sombra ligera */
 }
 
 .clock {
     display: inline-block;
-    background-color: #b3cfeb; /* Fondo de color azul oscuro */
+    background-color: #000;
+    /* Fondo negro */
+}
 
+
+/* Calendar */
+#calendar {
+    border-collapse: collapse;
+}
+
+#calendar th,
+#calendar td {
+    border: 1px solid #ddd;
+    padding: 9.5px;
+    text-align: center;
+}
+
+#calendar th {
+    background-color: #f0f0f0;
+}
+
+#calendar td {
+    cursor: pointer;
+    position: relative;
+}
+
+#calendar td.circle {
+    position: relative;
+}
+
+#calendar .circle::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #3498db52;
+}
+
+#calendar .day-label {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.8em;
+    color: #3498db;
+}
+
+/* Map */
+#map {
+    height: 180px;
 }
