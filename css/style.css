@@ -21,7 +21,7 @@ main{
 #searchBarContainer {
     display: block;
     position: absolute;
-    top: 95px;
+    top: 15px;
     z-index: 1;
     /*Inicialmente fuera de pantalla */
     left: -100%;
@@ -51,12 +51,12 @@ main{
 }
 
 #searchBarContainer.active {
-    left: 110px;
+    left: 250px;
     /*Cambia posición cuando se activa */
 }
 
 #searchBarContainer.active button {
-    left: 110px;
+    left: 250px;
     /*Cambia posición cuando se activa */
 }
 
