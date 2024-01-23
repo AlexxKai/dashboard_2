@@ -75,3 +75,20 @@ main{
     background-color: #333;
     color: #fff;
 }
+
+/* Clock */
+.clock-container {
+    font-family: 'Arial', sans-serif;
+    font-size: 3em;
+    color: #000; /* Color del texto blanco */
+    background-color: #a8caec; /* Color de fondo azul más claro */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+}
+
+.clock {
+    display: inline-block;
+    background-color: #b3cfeb; /* Fondo de color azul oscuro */
+
+}
