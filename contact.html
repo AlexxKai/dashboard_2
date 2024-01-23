@@ -65,47 +65,85 @@
 
   <!-- MAIN -->
   <main>
-    <!-- seleccionar opcion -->
-    <select class="form-select form-select-lg mb-3" aria-label="Large select example">
-      <option selected>Type of contact</option>
-      <option value="1">Suggestion</option>
-      <option value="2">Help</option>
-      <option value="3">Complaint</option>
-    </select>
+    <div class="container">
+      <h2>Formulario de Contacto</h2>
 
-    <select class="form-select form-select-sm" aria-label="Small select example">
-      <option selected>Open this select menu</option>
-      <option value="1">One</option>
-      <option value="2">Two</option>
-      <option value="3">Three</option>
-    </select>
+      <div class="form-group">
+        <label for="tipoContacto">Seleccione el tipo de contacto:</label>
+        <select class="form-control" id="tipoContacto" onchange="mostrarCampos()">
+          <option value="" selected>Seleccionar el tipo de contacto</option>
+          <option value="sugerencia">Sugerencia</option>
+          <option value="ayuda">Ayuda</option>
+          <option value="reclamacion">Reclamación</option>
+        </select>
+      </div>
 
-    <!-- confirmar usuario -->
-    <form class="row g-3">
-      <div class="col-auto">
-        <label for="staticEmail2" class="visually-hidden">Email</label>
-        <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="email@example.com">
+      <form id="formularioContacto">
+        <div class="form-group" id="campoCorreo" style="display: none;">
+          <label for="correo">Correo Electrónico:</label>
+          <input type="email" class="form-control" id="correo" placeholder="Ingrese su correo">
+        </div>
+
+        <div class="form-group" id="campoComentarios">
+          <label for="comentarios">Comentarios:</label>
+          <textarea class="form-control" id="comentarios" rows="4" placeholder="Ingrese sus comentarios"></textarea>
+        </div>
+
+        <div class="form-group" id="campoID" style="display: none;">
+          <label for="idReclamacion">Número de ID (Reclamación):</label>
+          <input type="text" class="form-control" id="idReclamacion" placeholder="Ingrese el número de ID">
+        </div>
+
+        <!-- Nuevo campo para cargar archivos específico para reclamaciones -->
+        <div class="form-group" id="campoArchivos" style="display: none;">
+          <label for="formFileMultiple" class="form-label">Adjuntar archivos:</label>
+          <input class="form-control" type="file" id="formFileMultiple" multiple>
+        </div>
+        <br>
+        <button type="button" class="btn btn-primary" onclick="enviarFormulario()">Enviar</button>
+      </form>
+    </div>
+
+
+
+    <!-- Modal de confirmación -->
+    <div class="modal" tabindex="-1" role="dialog" id="myModal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Registro Exitoso</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Los datos se han registrado correctamente.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal"
+              onclick="restablecerFormulario()">Cerrar</button>
+          </div>
+        </div>
       </div>
-      <div class="col-auto">
-        <label for="inputPassword2" class="visually-hidden">Password</label>
-        <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
-      </div>
-      <div class="col-auto">
-        <button type="submit" class="btn btn-primary mb-3">Confirm identity</button>
-      </div>
-    </form>
+    </div>
   </main>
 
 
   <!-- FOOTER -->
-  <footer>
-
+  <footer class="text-center">
+    <p>Other ways to contact:</p>
+    <p>Phone: 666-66666666</p>
+    <p>Email: info@question.com</p>
   </footer>
 
   <!--JavaScript at end of body for optimized loading-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="./js/search.js"></script>
+
+  <!-- Contact -->
+  <script src="./js/contact.js"></script>
+
 </body>
 
 </html>

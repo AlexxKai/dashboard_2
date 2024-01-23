@@ -150,3 +150,61 @@ main {
 #map {
     height: 180px;
 }
+
+/* Profile button */
+#dropdownBtn {
+    position: fixed;
+    left: 0;
+    bottom: 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    left: 30px;
+}
+
+#dropdownBtn img {
+    width: 60px;
+    border-radius: 100%;
+}
+
+.dropdown-content {
+    display: none;
+    position: fixed;
+    left: 12px;
+    bottom: 100px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border: 1px solid #a364f7;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgb(184, 107, 255);
+}
+
+.dropdown-content a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 0;
+    text-align: center;
+}
+
+#container {
+    border: #a364f7;
+    border-radius: 10px;
+}
+
+.container {
+    flex: 1;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+footer {
+    padding: 10px;
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+}

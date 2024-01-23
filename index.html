@@ -18,8 +18,7 @@
 
   <!-- Map -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-  integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-  crossorigin=""/>
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 
 </head>
 
@@ -65,74 +64,88 @@
           </div>
         </div>
       </div>
+       <!-- Profile button -->
+    <div class="dropdown">
+      <button id="dropdownBtn">
+        <img src="./img/yo.png" alt="Icono">
+      </button>
+
+      <div class="dropdown-content">
+        <a href="./login.html">Login/Register</a>
+        <a href="./profile.html">Profile</a>
+        <a href="#">Settings</a>
+      </div>
+
     </nav>
   </header>
 
   <!-- MAIN -->
   <main>
-    <div class="container rounded">
-      <h2 style="font-family: 'Alex Brush', cursive; margin-top: 0.5%;">Administration Panel</h2>
-      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
-        <!--Card-->
-        <div class="col">
-          <div class="card" style="width: auto">
-            <p id="myPieChart">
-            <div class="card-body">
-              <h5 class="card-title">Programming languages used</h5>
+   
+
+      <div class="container rounded">
+        <h2 style="font-family: 'Alex Brush', cursive; margin-top: 0.5%;">Administration Panel</h2>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+          <!--Card-->
+          <div class="col">
+            <div class="card" style="width: auto">
+              <p id="myPieChart">
+              <div class="card-body">
+                <h5 class="card-title">Programming languages used</h5>
+              </div>
             </div>
           </div>
-        </div>
-        <!--Card-->
-        <div class="col">
-          <div class="card" style="width: auto;">
-            <div class="clock-container">
-              <div id="clock" class="clock"></div>
-            </div>
-            <div id="calendar"></div>
-          </div>
-        </div>
-        <!--Card-->
-        <div class="col">
-          <div class="card" style="width: auto">
-            <div class="dino-container">
-              <img src="./img/gif/Trex.gif" alt="T-Rex en Montaña Rusa">
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Waiting...</h5>
+          <!--Card-->
+          <div class="col">
+            <div class="card" style="width: auto;">
+              <div class="clock-container">
+                <div id="clock" class="clock"></div>
+              </div>
+              <div id="calendar"></div>
             </div>
           </div>
-        </div>
-        <!--Card-->
-        <div class="col">
-          <div class="card" style="width: auto;">
-            <div id="map"></div>
-            <div class="card-body">
-              <h5 class="card-title" style="color: #000;">Location</h5>
+          <!--Card-->
+          <div class="col">
+            <div class="card" style="width: auto">
+              <div class="dino-container">
+                <img src="./img/gif/Trex.gif" alt="T-Rex en Montaña Rusa">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Waiting...</h5>
+              </div>
             </div>
           </div>
-        </div>
-        <!--Card-->
-        <div class="col">
-          <div class="card" style="width: auto">
-            <div id="train"></div>
-            <div class="card-body">
-              <h5 class="card-title">Planing</h5>
+          <!--Card-->
+          <div class="col">
+            <div class="card" style="width: auto;">
+              <div id="map"></div>
+              <div class="card-body">
+                <h5 class="card-title" style="color: #000;">Location</h5>
+              </div>
             </div>
           </div>
-        </div>
-        <!--Card-->
-        <div class="col">
-          <div class="card" style="width: auto">
-            <div id="curve_chart"></div>
-            <div class="card-body">
-              <h5 class="card-title">Company's growth</h5>
+          <!--Card-->
+          <div class="col">
+            <div class="card" style="width: auto">
+              <div id="train"></div>
+              <div class="card-body">
+                <h5 class="card-title">Planing</h5>
+              </div>
             </div>
           </div>
+          <!--Card-->
+          <div class="col">
+            <div class="card" style="width: auto">
+              <div id="curve_chart"></div>
+              <div class="card-body">
+                <h5 class="card-title">Company's growth</h5>
+              </div>
+            </div>
+          </div>
+          <!--Close card-->
         </div>
-        <!--Close card-->
       </div>
-    </div>
-    <br>
+      <br>
     </div>
   </main>
 
@@ -158,9 +171,11 @@
 
   <!-- Map -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-  crossorigin=""></script>
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script src="./js/map.js"></script>
+
+  <!-- Profile button -->
+  <script src="./js/img_profile.js"></script>
 
 </body>
 
