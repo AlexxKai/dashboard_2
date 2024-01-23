@@ -51,12 +51,12 @@ main{
 }
 
 #searchBarContainer.active {
-    left: 250px;
+    left: 180px;
     /*Cambia posición cuando se activa */
 }
 
 #searchBarContainer.active button {
-    left: 250px;
+    left: 180px;
     /*Cambia posición cuando se activa */
 }
 
