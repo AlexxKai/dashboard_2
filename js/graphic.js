@@ -12,7 +12,7 @@ function drawChart() {
   data.addColumn('number', 'Percentage');
   data.addRows([
     ['CSS', 20.5],
-    ['HTML', 49.4],
+    ['HTML', 49.3],
     ['JS', 28.2],
     ['SCSS', 2.0]
   ]);
