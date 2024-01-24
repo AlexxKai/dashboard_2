@@ -11,10 +11,10 @@ function drawChart() {
   data.addColumn('string', 'Element');
   data.addColumn('number', 'Percentage');
   data.addRows([
-    ['CSS', 24.1],
-    ['HTML', 59.3],
-    ['JS', 14.0],
-    ['SCSS', 2.6]
+    ['CSS', 20.5],
+    ['HTML', 49.4],
+    ['JS', 28.2],
+    ['SCSS', 2.0]
   ]);
 
 
