@@ -1,0 +1,113 @@
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+html {
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  margin-top: 75px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+#searchBarContainer {
+  display: block;
+  position: absolute;
+  top: 15px;
+  z-index: 1;
+  left: -100%;
+  transition: left 0.3s ease-in-out;
+}
+#searchBarContainer input, #searchBarContainer button {
+  border-radius: 20px;
+  border-bottom: 1px solid #a364f7;
+  box-shadow: 0 0 50px rgb(184, 107, 255);
+  background-color: #e41414;
+  color: #fff;
+}
+#searchBarContainer.active {
+  left: 180px;
+}
+#searchBarContainer.active input, #searchBarContainer.active button {
+  border-radius: 20px;
+  border-bottom: 1px solid #a364f7;
+  box-shadow: 0 0 20px rgb(184, 107, 255);
+  background-color: #333;
+  color: #fff;
+}
+
+.clock-container {
+  font-family: "Arial", sans-serif;
+  font-size: 3em;
+  color: #00d4ff;
+  background-color: #000;
+  padding: 20px;
+  border-radius: 3px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#calendar {
+  border-collapse: collapse;
+}
+#calendar th, #calendar td {
+  border: 1px solid #ddd;
+  padding: 9.5px;
+  text-align: center;
+}
+#calendar th {
+  background-color: #f0f0f0;
+}
+#calendar td {
+  cursor: pointer;
+  position: relative;
+}
+#calendar td.circle {
+  position: relative;
+}
+#calendar td.circle::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgba(52, 152, 219, 0.3215686275);
+}
+#calendar td .day-label {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.8em;
+  color: #3498db;
+}
+
+#map {
+  height: 180px;
+}
+
+.container {
+  flex: 1;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+footer {
+  padding: 10px;
+  background-color: #343a40;
+  color: white;
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */
